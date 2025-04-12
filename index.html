@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Viewer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .button-container {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 8px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Task Viewer</h1>
+
+  <div class="button-container">
+    <button onclick="loadTask('task1.html')">Task 1</button>
+    <button onclick="loadTask('task2.html')">Task 2</button>
+    <button onclick="loadTask('task3.html')">Task 3</button>
+    <button onclick="loadTask('task4.html')">Task 4</button>
+    <button onclick="loadTask('task5.html')">Task 5</button>
+    <button onclick="loadTask('task6.html')">Task 6</button>
+    <button onclick="loadTask('task7.html')">Task 7</button>
+    <button onclick="loadTask('task8.html')">Task 8</button>
+  </div>
+
+  <iframe id="taskFrame" src="" title="Task Output"></iframe>
+
+  <script>
+    function loadTask(taskFile) {
+      document.getElementById('taskFrame').src = taskFile;
+    }
+  </script>
+
+</body>
+</html>
